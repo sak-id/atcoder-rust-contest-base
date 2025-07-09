@@ -7,6 +7,7 @@ https://github.com/rust-lang-ja/atcoder-rust-base を、2025年7月にcargo gene
 - Macbook Air(M2)
 
 ## 改変内容
+- rust-toolchainのバージョン変更
 
 ## 使い方
 
