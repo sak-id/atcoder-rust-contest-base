@@ -38,6 +38,38 @@ path = "src/f.rs"
 name = "g"
 path = "src/g.rs"
 
+[[test]]
+name = "a"
+path = "samplecase_test/a.rs"
+
+[[test]]
+name = "b"
+path = "samplecase_test/b.rs"
+
+[[test]]
+name = "c"
+path = "samplecase_test/c.rs"
+
+[[test]]
+name = "d"
+path = "samplecase_test/d.rs"
+
+[[test]]
+name = "e"
+path = "samplecase_test/e.rs"
+
+[[test]]
+name = "f"
+path = "samplecase_test/f.rs"
+
+[[test]]
+name = "g"
+path = "samplecase_test/g.rs"
+
+[[test]]
+name = "sample_inputs"
+path = "samplecase_test/sample_inputs.rs"
+
 [dependencies]
 # AtCoder 2020年言語アップデート以降に使用できるクレート。
 # 次のページに各クレートについての細かい紹介があります。
