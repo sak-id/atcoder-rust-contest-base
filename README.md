@@ -10,6 +10,20 @@ https://github.com/rust-lang-ja/atcoder-rust-base を、2025年7月にcargo gene
 - rust-toolchainのバージョン変更
 
 ## 使い方
-
 ```shell
-cargo generate --git (このrepositoryのリンク) --branch ja```
+# A問題を実行
+cargo run --bin a
+
+# A問題をテスト
+cargo test --test a
+
+# A問題のみビルド
+cargo build --release --bin a
+
+# 全問題ビルド
+cargo build --release
+```
+
+コンテスト前にやること
+```shell
+cargo generate --git (このリポジトリのリンク) --branch ja```
