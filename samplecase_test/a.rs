@@ -7,23 +7,10 @@ fn sample1() {
     let testdir = TestDir::new(BIN, "");
     let output = testdir
         .cmd()
-        .output_with_stdin(r#"input here
+        .output_with_stdin(r#"3
 "#)
         .tee_output()
         .expect_success();
-    assert_eq!(output.stdout_str(), "sample\n");
-    assert!(output.stderr_str().is_empty());
-}
-
-#[test]
-fn sample2() {
-    let testdir = TestDir::new(BIN, "");
-    let output = testdir
-        .cmd()
-        .output_with_stdin(r#"another sample input
-"#)
-        .tee_output()
-        .expect_success();
-    assert_eq!(output.stdout_str(), "sample\n");
+    assert_eq!(output.stdout_str(), "Yes\n");
     assert!(output.stderr_str().is_empty());
 }

@@ -3,12 +3,13 @@
 個人用です。
 https://github.com/rust-lang-ja/atcoder-rust-base/tree/ja を、2025年7月にcargo generateで取得し改変しました。
 
-## 動作環境
+## 動作確認環境
 - Macbook Air(M2)
 
 ## 改変内容
 - rust-toolchainのバージョン変更
 - 各問題テンプレート：A問題~G問題までの解答ファイル・テストファイルを追加
+  - A問題のみ自分の好みにカスタマイズしています
 - テスト用シェルスクリプト：`./test [a-g]`で各問題のテストが可能
 
 ## 基本の使い方
@@ -34,7 +35,7 @@ cargo build --release
 
 ```shell
 # ディレクトリを作成
-cargo generate --git (このリポジトリのリンク)
+cargo generate --git git@github.com:sak-id/atcoder-rust-contest-base.git
 
 # 事前にビルドしておくといいらしい
 cargo build --release
@@ -49,3 +50,7 @@ cargo build --release
 ```shell
 chmod +x test.sh
 ```
+
+サンプルケース
+- A問題: 1ケース（出力例："Yes"）
+- B~G問題：3ケース（出力例："sample"）
