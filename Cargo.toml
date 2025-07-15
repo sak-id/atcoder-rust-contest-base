@@ -7,10 +7,6 @@ authors = ["sak-id <sakuraki.2001@gmail.com>"]
 edition = "2018"
 
 [[bin]]
-name = "main"
-path = "src/main.rs"
-
-[[bin]]
 name = "a"
 path = "src/a.rs"
 
@@ -65,10 +61,6 @@ path = "samplecase_test/f.rs"
 [[test]]
 name = "g"
 path = "samplecase_test/g.rs"
-
-[[test]]
-name = "sample_inputs"
-path = "samplecase_test/sample_inputs.rs"
 
 [dependencies]
 # AtCoder 2020年言語アップデート以降に使用できるクレート。
