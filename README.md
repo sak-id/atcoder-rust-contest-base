@@ -31,7 +31,29 @@ cargo build --release
 
 ## コンテストでの使い方
 テストケース等の取得はしません。
-`samplecase_test`ディレクトリ以下のファイルの該当の箇所にコピペしてください。
+`samplecase_test/a.rs` などの `SAMPLE_JSON` に JSON 本文を貼り付けてください。
+
+貼り付け形式（objectのみ）:
+```json
+{
+  "problem_url": "https://atcoder.jp/contests/abc156/tasks/abc156_c",
+  "samples": [
+    {
+      "input": "2\n1 4",
+      "expected": "5\n"
+    },
+    {
+      "input": "7\n14 14 2 13 56 2 37",
+      "expected": "2354\n"
+    }
+  ]
+}
+```
+
+判定ルール:
+- `stdout` と `expected` は完全一致
+- `stderr` は空であること
+- 同一 `input + expected` ペアが重複した場合はテスト失敗
 
 ```shell
 # ディレクトリを作成
@@ -52,5 +74,4 @@ chmod +x test.sh
 ```
 
 サンプルケース
-- A問題: 1ケース（出力例："Yes"）
-- B~G問題：3ケース（出力例："sample"）
+- A~G問題: 各1ケース（出力例: "Yes\\n"）

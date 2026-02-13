@@ -1,16 +1,21 @@
-use cli_test_dir::*;
+#[path = "common.rs"]
+mod common;
 
-const BIN: &'static str = "./a";
+const BIN: &str = "./a";
+
+const SAMPLE_JSON: &str = r#"
+{
+  "problem_url": "https://atcoder.jp/contests/abc156/tasks/abc156_a",
+  "samples": [
+    {
+      "input": "3\n",
+      "expected": "Yes\n"
+    }
+  ]
+}
+"#;
 
 #[test]
-fn sample1() {
-    let testdir = TestDir::new(BIN, "");
-    let output = testdir
-        .cmd()
-        .output_with_stdin(r#"3
-"#)
-        .tee_output()
-        .expect_success();
-    assert_eq!(output.stdout_str(), "Yes\n");
-    assert!(output.stderr_str().is_empty());
+fn samples() {
+    common::run_json_samples(BIN, SAMPLE_JSON);
 }

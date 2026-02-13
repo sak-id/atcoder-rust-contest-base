@@ -1,42 +1,21 @@
-use cli_test_dir::*;
+#[path = "common.rs"]
+mod common;
 
-const BIN: &'static str = "./g";
+const BIN: &str = "./g";
 
-#[test]
-fn sample1() {
-    let testdir = TestDir::new(BIN, "");
-    let output = testdir
-        .cmd()
-        .output_with_stdin(r#"input here
-"#)
-        .tee_output()
-        .expect_success();
-    assert_eq!(output.stdout_str(), "sample\n");
-    assert!(output.stderr_str().is_empty());
+const SAMPLE_JSON: &str = r#"
+{
+  "problem_url": "https://atcoder.jp/contests/abc000/tasks/abc000_g",
+  "samples": [
+    {
+      "input": "",
+      "expected": "Yes\n"
+    }
+  ]
 }
+"#;
 
 #[test]
-fn sample2() {
-    let testdir = TestDir::new(BIN, "");
-    let output = testdir
-        .cmd()
-        .output_with_stdin(r#"input here
-"#)
-        .tee_output()
-        .expect_success();
-    assert_eq!(output.stdout_str(), "sample\n");
-    assert!(output.stderr_str().is_empty());
-}
-
-#[test]
-fn sample3() {
-    let testdir = TestDir::new(BIN, "");
-    let output = testdir
-        .cmd()
-        .output_with_stdin(r#"input here
-"#)
-        .tee_output()
-        .expect_success();
-    assert_eq!(output.stdout_str(), "sample\n");
-    assert!(output.stderr_str().is_empty());
+fn samples() {
+    common::run_json_samples(BIN, SAMPLE_JSON);
 }
