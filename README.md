@@ -8,7 +8,9 @@ https://github.com/rust-lang-ja/atcoder-rust-base/tree/ja を、2025年7月にca
 
 ## 改変内容
 - rust-toolchainのバージョン変更
-- 各問題テンプレート：A問題~G問題までの解答ファイル・テストファイルを追加
+- 各問題テンプレート：A問題~G問題までの問題別ディレクトリを追加
+  - 解答ファイル: `a/main.rs` など
+  - サンプルケース: `a/sample.json` など
   - A問題のみ自分の好みにカスタマイズしています
 - テスト用シェルスクリプト：`./test [a-g]`で各問題のテストが可能
 
@@ -31,7 +33,8 @@ cargo build --release
 
 ## コンテストでの使い方
 テストケース等の取得はしません。
-`samplecase_test/a.rs` などの `SAMPLE_JSON` に JSON 本文を貼り付けてください。
+`a/sample.json` などに JSON 本文をそのまま貼り付けてください。
+解答コードは `a/main.rs` などに書きます。
 
 貼り付け形式（objectのみ）:
 ```json
@@ -63,6 +66,8 @@ cargo generate --git git@github.com:sak-id/atcoder-rust-contest-base.git
 cargo build --release
 
 # a問題の解答コード、テストケースを入力した後にテストを行う
+# 解答コード: a/main.rs
+# テストケース: a/sample.json
 ./test.sh a 
 
 ```
@@ -74,4 +79,4 @@ chmod +x test.sh
 ```
 
 サンプルケース
-- A~G問題: 各1ケース（出力例: "Yes\\n"）
+- A~G問題: `*/sample.json` に各1ケース（出力例: "Yes\\n"）

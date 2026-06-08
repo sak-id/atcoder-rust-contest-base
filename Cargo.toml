@@ -8,59 +8,59 @@ edition = "2018"
 
 [[bin]]
 name = "a"
-path = "src/a.rs"
+path = "a/main.rs"
 
 [[bin]]
 name = "b"
-path = "src/b.rs"
+path = "b/main.rs"
 
 [[bin]]
 name = "c"
-path = "src/c.rs"
+path = "c/main.rs"
 
 [[bin]]
 name = "d"
-path = "src/d.rs"
+path = "d/main.rs"
 
 [[bin]]
 name = "e"
-path = "src/e.rs"
+path = "e/main.rs"
 
 [[bin]]
 name = "f"
-path = "src/f.rs"
+path = "f/main.rs"
 
 [[bin]]
 name = "g"
-path = "src/g.rs"
+path = "g/main.rs"
 
 [[test]]
 name = "a"
-path = "samplecase_test/a.rs"
+path = "a/sample_test.rs"
 
 [[test]]
 name = "b"
-path = "samplecase_test/b.rs"
+path = "b/sample_test.rs"
 
 [[test]]
 name = "c"
-path = "samplecase_test/c.rs"
+path = "c/sample_test.rs"
 
 [[test]]
 name = "d"
-path = "samplecase_test/d.rs"
+path = "d/sample_test.rs"
 
 [[test]]
 name = "e"
-path = "samplecase_test/e.rs"
+path = "e/sample_test.rs"
 
 [[test]]
 name = "f"
-path = "samplecase_test/f.rs"
+path = "f/sample_test.rs"
 
 [[test]]
 name = "g"
-path = "samplecase_test/g.rs"
+path = "g/sample_test.rs"
 
 [dependencies]
 # AtCoder 2020年言語アップデート以降に使用できるクレート。

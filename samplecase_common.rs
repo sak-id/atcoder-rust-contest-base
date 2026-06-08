@@ -24,7 +24,10 @@ pub fn run_json_samples(bin: &str, json: &str) {
         panic!("samples must not be empty for {}", bin);
     }
 
-    let problem_url = sample_file.problem_url.as_deref().unwrap_or("problem_url not set");
+    let problem_url = sample_file
+        .problem_url
+        .as_deref()
+        .unwrap_or("problem_url not set");
     let mut seen_pairs: HashMap<(String, String), usize> = HashMap::new();
 
     for (index, sample) in sample_file.samples.iter().enumerate() {
